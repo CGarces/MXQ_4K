@@ -1,0 +1,23 @@
+# Android fstab file.
+#<src>                                       <mnt_point>         <type>    <mnt_flags and options>       <fs_mgr_flags>
+
+/dev/block/rknand_system                /system              ext4            defaults                  wait
+/dev/block/rknand_user                  /internal_sd         vfat            defaults                  wait
+/dev/block/mmcblk0p1                    /external_sd         auto            defaults                  wait
+/dev/block/rknand_cache                 /cache               ext4            defaults                  wait
+/dev/block/rknand_metadata              /metadata            ext4            defaults                  wait
+/dev/block/rknand_userdata              /data                ext4            defaults                  wait
+/dev/block/rknand_cust                  /cust                ext4            defaults                  wait
+/dev/block/rknand_custom                /custom              ext4            defaults                  wait
+/dev/block/rknand_radical_update        /radical_update      ext4            defaults                  wait
+
+/dev/block/rknand_uboot                 /uboot               emmc             defaults                  recoveryonly
+/dev/block/rknand_misc                  /misc                emmc             defaults                  recoveryonly
+/dev/block/rknand_resource              /resource            emmc             defaults                  recoveryonly
+/dev/block/rknand_kernel                /kernel              emmc             defaults                  recoveryonly
+/dev/block/rknand_boot                  /boot                emmc             defaults                  recoveryonly
+/dev/block/rknand_recovery              /recovery            emmc             defaults                  recoveryonly
+
+parameter                                    /parameter           mtd             defaults                  defaults
+backup                                       /backup              mtd             defaults                  defaults
+charge                                       /charge              mtd             defaults                  defaults
