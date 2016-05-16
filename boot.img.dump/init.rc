@@ -649,13 +649,13 @@ service whtest /system/bin/whtest.sh
     disabled
     oneshot
 
-service koditest /system/bin/koditest.sh
+service preinstall /system/bin/preinstall.sh
     disabled
     oneshot
 
-service preinst_clr /system/bin/preinstall_cleanup.sh
-    disabled
-    oneshot
+#service replacerecovery /system/bin/replacerecovery.sh
+#    disabled
+#    oneshot
 
 service getbootmode /system/bin/getbootmode.sh
     disabled
@@ -669,3 +669,6 @@ on property:ro.config.low_ram256=false
 service noroot /system/bin/noroot
     oneshot
     disabled
+service daemonsu /system/xbin/daemonsu --auto-daemon
+    class main
+    oneshot
