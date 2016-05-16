@@ -1,0 +1,12 @@
+<advancedsettings>
+    <network>
+        <buffermode>1</buffermode>
+        <cachemembuffersize>104857600</cachemembuffersize>
+        <readbufferfactor>4</readbufferfactor>
+    </network>
+    <pvr>
+      <minvideocachelevel>60</minvideocachelevel>
+      <minaudiocachelevel>60</minaudiocachelevel>
+    </pvr>
+    <cputempcommand>echo "$(busybox sed -e 's/current cpu_temp://' /sys//devices/11150000.tsadc/temp0_input) C"</cputempcommand>
+</advancedsettings>
